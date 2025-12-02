@@ -16,7 +16,7 @@
 |----------|-----|
 | **名前** | `SNOWFLAKE_DOCS_AGENT` |
 | **データベース** | `SHARED_CORTEX_AGENTS_DB` |
-| **スキーマ** | `AGENTS` |
+| **スキーマ** | `SHARED_AGENTS` |
 
 ### Step 3: ツールの追加
 

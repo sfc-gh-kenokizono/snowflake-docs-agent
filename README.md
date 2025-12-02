@@ -36,7 +36,7 @@ Cortex Knowledge Extension を使用して、Snowflake 公式ドキュメント�
 `setup.sql` を Snowsight で実行し、必要なリソースを作成します：
 
 - **データベース**: `SHARED_CORTEX_AGENTS_DB`
-- **スキーマ**: `AGENTS`
+- **スキーマ**: `SHARED_AGENTS`
 - **ウェアハウス**: `DOCS_AGENT_WH`
 - **Snowflake Intelligence オブジェクト**: `SNOWFLAKE_INTELLIGENCE_OBJECT_DEFAULT`
 
@@ -46,7 +46,7 @@ USE ROLE ACCOUNTADMIN;
 
 -- 共有オブジェクトを使うエージェント用の共通DB
 CREATE DATABASE IF NOT EXISTS SHARED_CORTEX_AGENTS_DB;
-CREATE SCHEMA IF NOT EXISTS SHARED_CORTEX_AGENTS_DB.AGENTS;
+CREATE SCHEMA IF NOT EXISTS SHARED_CORTEX_AGENTS_DB.SHARED_AGENTS;
 
 -- Snowflake Intelligence オブジェクト（既存があれば再利用）
 CREATE SNOWFLAKE INTELLIGENCE IF NOT EXISTS SNOWFLAKE_INTELLIGENCE_OBJECT_DEFAULT;
