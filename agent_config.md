@@ -15,8 +15,8 @@
 | 設定項目 | 値 |
 |----------|-----|
 | **名前** | `SNOWFLAKE_DOCS_AGENT` |
-| **データベース** | `SNOWFLAKE_INTELLIGENCE` |
-| **スキーマ** | `AGENTS` |
+| **データベース** | `SF_DOCS_AGENT_DB` |
+| **スキーマ** | `DEMO` |
 
 ### Step 3: ツールの追加
 

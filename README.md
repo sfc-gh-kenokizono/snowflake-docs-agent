@@ -35,13 +35,21 @@ Cortex Knowledge Extension を使用して、Snowflake 公式ドキュメント�
 
 `setup.sql` を Snowsight で実行し、必要なリソースを作成します：
 
+- **データベース**: `SF_DOCS_AGENT_DB`
+- **スキーマ**: `DEMO`
+- **ウェアハウス**: `DOCS_AGENT_WH`
+- **Snowflake Intelligence オブジェクト**: `SNOWFLAKE_INTELLIGENCE_OBJECT_DEFAULT`
+
 ```sql
--- Snowsight の SQL Worksheet で実行
+-- Snowsight の SQL Worksheet で setup.sql を実行
 USE ROLE ACCOUNTADMIN;
 
-CREATE DATABASE IF NOT EXISTS snowflake_intelligence;
-CREATE SCHEMA IF NOT EXISTS snowflake_intelligence.agents;
-GRANT CREATE AGENT ON SCHEMA snowflake_intelligence.agents TO ROLE PUBLIC;
+-- エージェント用DB.Schema（CKEは共有DBに直接置けないため）
+CREATE DATABASE IF NOT EXISTS SF_DOCS_AGENT_DB;
+CREATE SCHEMA IF NOT EXISTS SF_DOCS_AGENT_DB.DEMO;
+
+-- Snowflake Intelligence オブジェクト（既存があれば再利用）
+CREATE SNOWFLAKE INTELLIGENCE IF NOT EXISTS SNOWFLAKE_INTELLIGENCE_OBJECT_DEFAULT;
 ```
 
 ### Step 2: Snowflake Documentation の取得
