@@ -15,8 +15,8 @@
 | 設定項目 | 値 |
 |----------|-----|
 | **名前** | `SNOWFLAKE_DOCS_AGENT` |
-| **データベース** | `SF_DOCS_AGENT_DB` |
-| **スキーマ** | `DEMO` |
+| **データベース** | `SHARED_CORTEX_AGENTS_DB` |
+| **スキーマ** | `AGENTS` |
 
 ### Step 3: ツールの追加
 
